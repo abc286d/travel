@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>案例实战</title>
+  <script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+  <link href="css/travel.css" rel="stylesheet" type="text/css"/>
+
+
+  <script>
+      function openWindow() {
+          document.getElementById('light').style.display = 'block';
+          document.getElementById('fade').style.display = 'block';
+      }
+
+      function closeWindow() {
+          document.getElementById('light').style.display = 'none';
+          document.getElementById('fade').style.display = 'none';
+      }
+  </script>
+
+
+</head>
+
+<body>
+<div id="page-head" class="clearfix">
+  <div class="pull-left" id="flaat">
+    <strong>
+      <a href="#"><img src="img/logo.png"></a>
+      <ul class="navg">
+        <li><a href="travel.html">INDEX</a></li>
+        <li><a href="hotlist.html">DESTINATION</a></li>
+        <li><a href="retrospect.html">REVIEW</a></li>
+        <li><a href="#" onclick="openWindow()">JOIN US</a></li>
+      </ul>
+    </strong>
+    <div class="signre">
+      <a id="signup" href="login.html">Sign in</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="register" href="register.html">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            id="search" href="#"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;</a>
+    </div>
+    <form>
+      <input type="text" value="黄山" id="ser">
+    </form>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div id="carousel_box" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel_box" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel_box" data-slide-to="1"></li>
+      <li data-target="#carousel_box" data-slide-to="2"></li>
+      <li data-target="#carousel_box" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="slide-col2">
+          <h2>国际旅行</h2>
+          <div class="row">
+            <div class="span5">
+              <p>出国旅行超级好玩好玩好玩</p>
+              <p>风景优美花钱如流水而且没假期假期假期</p>
+              <p>周边小国是我们的项目北海道大阪韩国越南台湾等等</p>
+              <a class="more" href="#" target="_blank"><strong>了解国际旅行</strong></a>
+            </div>
+          </div>
+        </div>
+        <a href="#"><img src="img/yuenan.jpg"/></a>
+
+      </div>
+      <div class="item">
+        <div class="slide-col2">
+          <h2>国内旅行</h2>
+          <div class="row">
+            <div class="span5">
+              <p>国内旅行超级好玩好玩好玩</p>
+              <p>风景优美花钱不多而且不用办签证签证</p>
+              <p>全国各省是我们的项目江西云南四川新疆等等等等</p>
+              <a class="more" href="#" target="_blank"><strong>了解国内旅行</strong></a>
+            </div>
+          </div>
+        </div>
+        <a href="#"><img src="img/yading2.jpg"/></a>
+      </div>
+      <div class="item">
+        <div class="slide-col2">
+          <h2>周边旅行</h2>
+          <div class="row">
+            <div class="span5">
+              <p>周边旅行超级好玩好玩好玩</p>
+              <p>风景优美花钱很少而且没假期都可以玩玩玩</p>
+              <p>省内和邻省是我们的项目等等等等</p>
+              <a class="more" href="#" target="_blank"><strong>了解周边旅行</strong></a>
+            </div>
+          </div>
+        </div>
+        <a href="#"><img src="img/huangshan2.jpg"/></a>
+      </div>
+      <div class="item">
+        <div class="slide-col2">
+          <h2>市内活动</h2>
+          <div class="row">
+            <div class="span5">
+              <p>市内活动超级好玩好玩好玩</p>
+              <p>风景优美花钱很少而且随时随地都可以玩玩玩</p>
+              <p>满足各种文青和没朋友没假期的年轻人放飞自我的愿望</p>
+              <a class="more" href="#" target="_blank"><strong>了解市内旅行</strong></a>
+            </div>
+          </div>
+        </div>
+        <a href="#"><img src="img/liuhe.jpg"/></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1>HOT DEALS</h1>
+  <div class="row">
+    <div class="col-sm-4 s4">
+      <div class="whiteboard">
+        <a href="#" class="hot"><img src="img/yuenan.jpg" height=200px; width=100%;/></a>
+      </div>
+    </div>
+    <div class="col-sm-4 s4">
+      <div class="whiteboard">
+        <a href="#" class="hot"><img src="img/huangshan.jpg" height=200px; width=100%;/></a>
+        <h2>Trip Abroad To → </h2>
+        <h2>Huangshan</h2>
+        <h5><strong>2 FEB TO 4 FEB</strong></h5>
+        <p>We are going to watch the sunrise on top of Huangshan mountain.There is no feeling of depression in
+          winter here, often more beautiful than the spring and summer.</p>
+        <a href="#" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
+      </div>
+    </div>
+    <div class="col-sm-4 s4">
+      <div class="whiteboard">
+        <a href="#" class="hot"><img src="img/cinema.jpg" height=200px; width=100%;/></a>
+      </div>
+    </div>
+    <a href="#" class="btn btnh" role="button"><strong>MORE ACTIVITIES!</strong></a>
+    <div class="footinfo">
+      <h4>WeChat Official Accounts :
+        <h4>
+          <h2><strong>xiniujoy</strong></h2>
+    </div>
+  </div>
+</div>
+<div class="bluebg">
+  <div class="container">
+    <div class="row review1">
+      <h1>RETROSPECTION</h1>
+      <div class="col-sm-4 s4">
+        <div class="whiteboard">
+          <a href="#" class="hot"><img src="img/yading.jpg" height=200px; width=100%;/></a>
+        </div>
+      </div>
+      <div class="col-sm-4 s4">
+        <div class="whiteboard">
+          <a href="#" class="hot"><img src="img/wurendao.jpg" height=200px; width=100%;/></a>
+          <h2>Adventure To → </h2>
+          <h2>Desert Island</h2>
+          <h5><strong>1 Oct to 7 Oct 2017</strong></h5>
+          <p>To adventure a desert island,we cooperated with the local Island Club. There is guarantee of
+            interesting activities, material and equipments.</p>
+          <a href="#" class="btn btnc" role="button"><strong>More Pctures!</strong></a>
+        </div>
+      </div>
+      <div class="col-sm-4 s4">
+        <div class="whiteboard">
+          <a href="#" class="hot"><img src="img/lianshan.jpg" height=200px; width=100%;/></a>
+        </div>
+      </div>
+      <a href="#" class="btn btnl" role="button"><strong>MORE ACTIVITIES!</strong></a>
+      <div class="footinfo">
+        <h4>WeChat Official Accounts :
+          <h4>
+            <h2><strong>xiniujoy</strong></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="blue2bg">
+  <div class="container">
+    <div class="row jour">
+      <h1>GET TO KNOW XINIUJOY!</h1>
+      <p class="eve">Every journey begins with the first step</p>
+      <div class="span6 s6">
+        <div class="row">
+          <div class="span5">
+            <h3><strong>成员的话：</strong></h3>
+            <hr>
+            <div class="row">
+              <div class="span">
+                <div class="span potrait"><img src="img/yinsang.jpg" alt="Story2"></div>
+              </div>
+              <div class="span4">
+                <div class="quote">
+                  “非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好sdasasfasfsasffbbfafaef”
+                </div>
+                <div class="quote-author"><strong>—— <a href="#">坂田银时</a>, 参与活动8 次</strong></div>
+              </div>
+            </div>
+            <hr class="hrs">
+            <div class="row">
+              <div class="span">
+                <div class="span potrait"><img src="img/shenle.jpg" alt="Story2"></div>
+              </div>
+              <div class="span4">
+                <div class="quote">
+                  “嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好sdasasfasfsasffbbfafaef”
+                </div>
+                <div class="quote-author"><strong>—— <a href="#">神乐</a>, 参与活动3 次</strong></div>
+              </div>
+            </div>
+            <hr class="hrs">
+            <div class="row">
+              <div class="span">
+                <div class="span potrait"><img src="img/xinba.jpeg" alt="Story2"></div>
+              </div>
+              <div class="span4">
+                <div class="quote">
+                  “嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好sdasasfasfsasffbbfafaef”
+                </div>
+                <div class="quote-author"><strong>—— <a href="#">新八几</a>, 参与活动3 次</strong></div>
+              </div>
+            </div>
+            <hr class="hrs">
+          </div>
+          <div class="span"></div>
+        </div>
+      </div>
+      <div class="span6 s6">
+        <div class="row">
+          <div class="span"></div>
+          <div class="span5">
+            <h2><strong>我们的故事</strong></h2>
+            <hr>
+            <p>溪牛乐玩成立于2010年4月（原南京暴走团）在豆瓣平台上是南京成立最早的徒步\旅行组织。从成立开始，我们视声誉为生命。</p>
+            <p>我们用心做好每一个活动，和每个人努力成为朋友。</p>
+            <p>至今有12000多人和我们一起去过很多地方。这里面包括，零下40度的漠河、烈日炎炎的三亚、新疆的雪山和东极岛的风...</p>
+            <p>活动中产生了70多对走上婚姻殿堂的新人，谁和谁将是下一对</p>
+            <p>溪牛乐玩微信公众平台 xiniujoy</p>
+            <h2><strong>毕业旅行</strong></h2>
+            <hr>
+            <p>如果你即将毕业，离开南京，正和班级的同学准备一场毕业旅行，可以向班长推荐溪牛乐玩。和我们的其它活动一样，这是不盈利的。我们将为你们的毕业旅行规划路线安排行程，甚至是安排领队。</p>
+            <p>只要在国内，我们都能组织，正因为非营利，所以保证全宇宙最低价，希望毕业离开这座城市后，能记住我们共有的青春。欢迎来加我们的QQ 1265860593 或者私信新浪微博@溪牛乐玩</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="foo">
+    <a href="#" class="btn btnf" role="button"><strong>CONTACT US!</strong></a>
+  </div>
+</div>
+
+<footer class="fff">
+  <hr class="copyr">
+  <p>所有图片由溪牛乐玩活动提供</p>
+  <p>其他用户头像均由溪牛乐玩虚假用户提供，授权溪牛乐玩使用</p>
+  <p>Copyright © 2010-2018 ？？？？？？.com, all rights reserved. 苏ICP备.......</p>
+</footer>
+</body>
+
+

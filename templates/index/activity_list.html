@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}精彩活动！{% endblock %}
+
+{% block content %}
+    <div class="span3 width5">
+      <div class="opbg">
+        <section>
+          <div class="page-header">
+            <h3>人气排行</h3>
+          </div>
+        </section>
+        <section class="hotpad">
+          <h4>当季行程</h4>
+          <ul>
+              {% for activity in activities %}
+                  {% if activity.show == 1 %}
+                      <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
+        </section>
+        <section>
+          <h4>历史行程</h4>
+          <ul>
+            {% for activity in activities %}
+                  {% if activity.show == 2 %}
+                      <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
+        </section>
+      </div>
+    </div>
+{% endblock %}

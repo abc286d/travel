@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ activity.title }}！{% endblock %}
+
+{% block content %}
+    <div>
+        {{ activity.body }}
+    </div>
+{% endblock %}
