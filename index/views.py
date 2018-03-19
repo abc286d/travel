@@ -7,10 +7,10 @@ def index(request):
 
 
 def activity_list(request):
-    activities = Activity.objects
+    activities = Activity.objects.all()
     return render(request, "index/activity_list.html", {"activities": activities})
 
-def activity_detail(request, id, slug):
-    article = get_object_or_404(Activity, id=id, slug=slug)
-    return render(request, "index/article_detail.html", {"article": article})
 
+def activity_detail(request, id, slug):
+    activity = get_object_or_404(Activity, id=id, slug=slug)
+    return render(request, "index/activity_detail.html", {"activity": activity})

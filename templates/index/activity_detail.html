@@ -5,6 +5,8 @@
 
 {% block content %}
     <div>
-        {{ activity.body }}
+        {% autoescape off %}
+          {{ activity.body }}
+        {% endautoescape %}
     </div>
 {% endblock %}

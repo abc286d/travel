@@ -129,4 +129,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 
 LOGIN_REDIRECT_URL = '/'
 
-#CKEDITOR_BASEPATH = "/static_root/ckeditor/ckeditor"

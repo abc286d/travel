@@ -2,10 +2,10 @@
 <div id="page-head" class="clearfix">
   <div class="pull-left" id="flaat">
     <strong>
-      <a href="#"><img src='{% static "img/logo.png" %}'></a>
+      <a href="\"><img src='{% static "img/logo.png" %}'></a>
       <ul class="navg">
         <li><a href="\">INDEX</a></li>
-        <li><a href="#">DESTINATION</a></li>
+        <li><a href="{% url "activity:activity_list" %}">DESTINATION</a></li>
         <li><a href="#">REVIEW</a></li>
         <li><a href="#" onclick="openWindow()">JOIN US</a></li>
       </ul>
