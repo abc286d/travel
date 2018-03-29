@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}register user{% endblock %}
+{% block title %}用户注册啦{% endblock %}
 {% block content %}
 <div class="row text-center vertical-middle-sm">
     <h1>Register</h1>
@@ -7,21 +7,21 @@
     <p>or register.</p>
     <form class="form-horizontal" action="." method="post">{% csrf_token %}
         <div class="form-group">
-            <label for="{{ form.username.id_for_label }}" class="col-md-5 control-label">Username</label>
+            <label for="{{ form.username.id_for_label }}" class="col-md-5 control-label">用户名</label>
             <div class="col-md-6 text-left">{{ form.username }}</div>
         </div>
 
         <div class="form-group">
-            <label for="{{ profile.phone.id_for_label }}" class="col-md-5 control-label">Phone</label>
-            <div class="col-md-6 text-left">{{ profile.phone }}</div>
+            <label for="{{ profile.sex.id_for_label }}" class="col-md-5 control-label">性别</label>
+            <div class="col-md-6 text-left">{{ profile.sex }}</div>
         </div>
 
         <div class="form-group">
-            <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label">Password</label>
+            <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label">密码</label>
             <div class="col-md-6 text-left">{{ form.password }}</div>
         </div>
         <div class="form-group">
-            <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label">Confirm Password</label>
+            <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label">确认密码</label>
             <div class="col-md-6 text-left">{{ form.password2 }}</div>
         </div>
 

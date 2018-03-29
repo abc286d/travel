@@ -4,33 +4,67 @@
 {% block title %}精彩活动！{% endblock %}
 
 {% block content %}
-    <div class="span3 width5">
-      <div class="opbg">
+  <div class="container main-body">
+    <div class="row">
+      <div class="span8 s888">
         <section>
           <div class="page-header">
-            <h3>人气排行</h3>
+            <h2>当季热卖</h2>
           </div>
         </section>
-        <section class="hotpad">
-          <h4>当季行程</h4>
-          <ul>
+        <div class="articles articless">
+          <div class="article">
+            <div class="row">
+              <div class="span2">
+                <div class="thumnail"><img src="img/yuenans.jpg"/></div>
+              </div>
+              <div class="span6 pp">
+                <div class="titleh"><a href="#"><strong>时光中的越南 VOL3 (复刻版）</strong></a></div>
+                <div class="infoh"><span>DEPARTURE</span> <span>1/18 2018</span></div>
+                <hr class="shorthr">
+                <div class="summaryh">
+                  我们以一篇溪牛乐玩第一次的越南游作为开篇，这些照片来源于我们真实的眼界，犹如我们每一次真实地和大家一起旅行。这是一个充满阳光的地方，越往南走，阳光越刺眼。时值冬季，但是我们所去的南方...
+                </div>
+              </div>
+            </div>
+            <div class="data row"><span class="span6"></span> <span class="span2"> <span class="item"> <i
+                    class="icon-tags"></i> <span></span> </span> <span class="item"> <i
+                    class="icon-list-alt"></i> <a
+                    href="#" class="btn btnh"
+                    role="button"><strong>MORE details</strong></a> </span> </span></div>
+          </div>
+        </div>
+      </div>
+      <div class="span"></div>
+      <div class="span3 width5">
+        <div class="opbg">
+          <section>
+            <div class="page-header">
+              <h3>人气排行</h3>
+            </div>
+          </section>
+          <section class="hotpad">
+            <h4>当季行程</h4>
+            <ul>
               {% for activity in activities %}
-                  {% if activity.show == 1 %}
-                      <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>
-                  {% endif %}
+                {% if activity.show == 1 %}
+                  <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>
+                {% endif %}
               {% endfor %}
-          </ul>
-        </section>
-        <section>
-          <h4>历史行程</h4>
-          <ul>
-            {% for activity in activities %}
-                  {% if activity.show == 2 %}
-                      <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>
-                  {% endif %}
+            </ul>
+          </section>
+          <section>
+            <h4>历史行程</h4>
+            <ul>
+              {% for activity in activities %}
+                {% if activity.show == 2 %}
+                  <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>
+                {% endif %}
               {% endfor %}
-          </ul>
-        </section>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
+  </div>
 {% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}修改个人资料！{% endblock %}
+
+{% block content %}
+<div class="row text-center vertical-middle-sm">
+    <h1>编辑我的资料</h1>
+    <div class="row">
+        <div class="col-md-6" >
+        <form class="form-horizontal" action="." method="post">{% csrf_token %}
+            <div class="row">
+                <div class="col-md-4 text-right"><span>用户名:</span></div>
+                <div class="col-md-8 text-left">{{user.username}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>性别:</span></div>
+                {% if userprofile.sex == 'M' %}
+                    <div class="col-md-8 text-left">"汉子"</div>
+                {% else %}
+                    <div class="col-md-8 text-left">"妹子"</div>
+                {% endif %}
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>所在地:</span></div>
+                <div class="col-md-8 text-left">{{userprofile_form.address}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right"><span>个人介绍:</span></div>
+                <div class="col-md-8 text-left">{{userprofile_form.aboutme}}</div>
+            </div>
+            <div class="row">
+                <input type="submit" class="btn btn-primary btn-lg" value="Submit">
+            </div>
+        </form>
+        </div>
+        <div class="col-md-6">
+            <p>picture</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+

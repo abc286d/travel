@@ -12,7 +12,14 @@
     </strong>
     <div class="signre">
         {% if user.is_authenticated %}
-        <a id="signup" href="#">{{ user.username }}</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <button class="btn btn-default dropdown-toggle" type="button"
+                                    id="dropdownMenu" data-toggle="dropdown">
+                            {{ user.username }}<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url "account:password_change" %}">更改密码</a></li>
+                                <li><a href="{% url "account:my_information" %}">个人信息</a></li>
+                            </ul>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
         <a id="register" href="{% url 'account:user_logout' %}">Log out</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
             id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>
         {% else %}<!--这里可以做一个下拉菜单，但是我搞不出来-->

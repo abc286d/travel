@@ -9,7 +9,7 @@ class RegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username', 'email')
+        fields = ('username',)
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -21,4 +21,4 @@ class RegistrationForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ("phone",)
+        fields = ("sex", "address", "aboutme")

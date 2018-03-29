@@ -3,7 +3,7 @@ body {
     padding-left: 0px;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 18px;
     color: #3c443e;
     background-color: #c9b545;
@@ -518,3 +518,199 @@ form {
    overflow: auto;
    overflow:hidden;
 }  
+
+
+/*--------forum-------*/
+.jourhead {
+    margin-top: 6%;
+}
+
+.midd h2 {
+    color:#ffffff;
+    font-size: 40px;
+    text-align: center;
+}
+
+.fulll {
+    margin-left:12.5%;
+    padding-right:3%;
+}
+
+.fullll {
+    margin-left:10%;
+    padding-right:3%;
+}
+
+.note {
+    height:400px;
+    margin-bottom: 20px;
+    background-color:rgba(255,255,255,0.5);
+}
+
+.portrait {
+    margin-left:25px;
+    margin-top:25px;
+    height:80px;
+    width:80px;
+    border-radius:80px;
+    overflow: hidden;
+}
+
+.portrait img {
+    width:80px;
+}
+
+.writer {
+    padding-right: 3%;
+}
+.naming {
+    text-align:center;
+    padding-top:10px;
+    font-size: 20px;
+}
+
+.timing {
+    text-align:center;
+    padding-top:10px;
+    font-size: 15px;
+}
+
+.photo {
+    background-color: #609f80;
+    margin-top:25px;
+    margin-right:6%;
+    height:300px;
+    margin-left:-2%;
+}
+.photo img {
+    height:300px;
+    clear: both; 
+    display:block; 
+    margin:auto; 
+    margin-top:-18px;
+}
+
+.tryy {
+    background-color: #666e68;
+}
+
+.photohead {
+    padding-top:20px;
+    margin-left:-6%;
+    text-align: center;
+    font-size: 24px;
+}
+
+.likecomment {
+    height:390px;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.opbg2 {
+    background-color: rgba(0, 0, 0, 0.2);
+    height:1000px;
+    width:15%;
+    margin-bottom: 15px;
+    position:absolute;
+    margin-top:150px;
+}
+
+.width52 h3 {
+    padding-left:20px;
+    color:#ffffff;
+}
+
+.writerinfo p {
+    font-size: 16px;
+    color:rgba(255, 255, 255,0.9);
+}
+
+.writerinfo p{   
+
+    margin-left:10px; 
+}
+
+.fundm {
+    margin-top:10px;
+}
+
+.selfintro {
+    padding-top:20px;
+    padding-left:25px;
+    padding-right:25px;
+    font-size: 17px;
+    line-height: 24px;
+    color:rgb(255,255,255);
+    padding-bottom: 40px;
+}
+
+.width52 li {
+    color:rgb(255,255,255);
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.width52 a {
+    color:rgb(255,255,255);
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.passage {
+    margin-top:110px;
+    color:#000000;
+}
+
+.passage h1 {
+    font-size: 30px;
+    text-align: left;
+}
+
+.passagehead {
+    font-size: 15px;
+}
+
+.passagehead p {
+    padding-top:14px;
+    margin-left:-15px;
+    font-size: 16px;
+}
+.portrait2 {
+    margin-left:10px;
+    margin-top:10px;
+    height:70px;
+    width:70px;
+    overflow: hidden;
+}
+.portrait2 img {
+    width:70px;
+}
+
+.portrait3 {
+    margin-top:5px;
+    height:35px;
+    width:35px;
+    overflow: hidden;
+}
+
+.portrait3 img {
+    width:35px;
+}
+
+.myphoto img{
+    width: 100%; 
+}
+
+.describetext {
+    margin-top:20px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing:1px;
+}
+
+.likcom {
+    display: table-cell;
+    vertical-align: bottom;
+    height:30px;
+}

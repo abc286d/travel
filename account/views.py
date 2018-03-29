@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from .models import UserProfile
+from django.contrib.auth.models import User
 from .forms import RegistrationForm, UserProfileForm
 
 
@@ -25,3 +28,27 @@ def register(request):
         userprofile_form = UserProfileForm()
         return render(request, "account/register.html", {"form": user_form, "profile": userprofile_form})
 
+
+@login_required(login_url='/account/login/')
+def myself(request):
+    user = User.objects.get(username=request.user.username)
+    userprofile = UserProfile.objects.get(user=user)
+    return render(request, "account/myself.html", {"user": user, "userprofile": userprofile})
+
+
+@login_required(login_url='/account/login/')
+def myself_edit(request):
+    userprofile = UserProfile.objects.get(user=request.user)
+    if request.method == "POST":
+        userprofile_form = UserProfileForm(request.POST)
+        if userprofile_form.is_valid():
+            userprofile_cd = userprofile_form.cleaned_data
+            userprofile.address = userprofile_cd['address']
+            userprofile.aboutme = userprofile_cd['aboutme']
+            userprofile.save()
+        return HttpResponseRedirect('/account/my-information/')
+    else:
+        userprofile_form = UserProfileForm(
+            initial={"sex": userprofile.sex, "address": userprofile.address, "aboutme": userprofile.aboutme})
+        return render(request, "account/myself_edit.html",
+                      {"userprofile": userprofile, "userprofile_form": userprofile_form})
