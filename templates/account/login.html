@@ -3,23 +3,26 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <div class="row text-center vertical-middle-sm">
-        <h1>Login</h1>
-        <p>Input your username and password</p>
+    <div class="row loginppp text-center vertical-middle-sm">
+    <div class="loginqqq">
+        <h1>欢迎登录</h1>
+        <p style="color:4b574d">输入您的用户名和密码</p>
         <form class="form-horizontal" action="." method="post">{% csrf_token %}
             <!-- {{ form.as_p }} -->
-            <div class="form-group">
+            <div class="form-group form-group1">
                 <label for="{{ form.username.id_for_label }}" class="col-md-5 control-label"
-                       style="color:red">
-                    <span class="glyphicon glyphicon-user"></span>Username</label>
-                <div class="col-md-6 text-left">{{ form.username }}</div>
+                       style="color:rgba(0,0,0,0.7); line-height:40px;">
+                    <span class="glyphicon glyphicon-user"></span>用户名</label>
+                <div class="col-md-6 text-left" style="line-height:30px;">{{ form.username }}</div>
             </div>
-            <div class="form-group">
+            <div class="form-group form-group2">
                 <label for="{{ form.password.id_for_label }}" class="col-md-5 control-label"
-                       style="color:blue"><span class="glyphicon glyphicon-floppy-open"></span>Password</label>
-                <div class="col-md-6 text-left">{{ form.password }}</div>
+                       style="color:rgba(0,0,0,0.7); line-height:40px;"><span class="glyphicon glyphicon-floppy-open"></span>密码</label>
+                <div class="col-md-6 text-left" style="line-height:30px;">{{ form.password }}</div>
             </div>
-            <input type="submit" class="btn btn-primary btn-lg" value="Login">
+            <p style="color:4b574d">本站会将不会泄露任何您的个人信息</p>
+            <input type="submit" class="btn btn-primary btn-lg" value="登录">
         </form>
+    </div>>
     </div>
 {% endblock %}

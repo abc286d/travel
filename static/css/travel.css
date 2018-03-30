@@ -6,7 +6,7 @@ body {
     font-size: 15px;
     line-height: 18px;
     color: #3c443e;
-    background-color: #c9b545;
+    background: url(../img/texture2.jpg);
     overflow: scroll;
     z-index: -1;     
 }
@@ -14,7 +14,7 @@ hr {
     margin: 18px 0;
     border: 0;
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ffffff;
 }
 a { color: #3c443e; }
 a:hover, a:focus { color: #3c443e; }
@@ -28,7 +28,7 @@ h1 {
 h2 {
     font-size: 30px;
     padding-left:30px;
-    color:#c9b545;
+    color:#eba94c;
     line-height: 13px;
     text-align: left;
 }
@@ -54,7 +54,7 @@ h5 {
 
 .navg {
     display: inline;
-    padding-left: 70px;
+    padding-left: 20px;
 }
 .navg li {
     padding-left: 30px;
@@ -71,7 +71,7 @@ h5 {
 
 .signre {
     display: inline;
-    padding-left: 100px;
+    padding-left: 60px;
     padding-top: 90px;
 }
 
@@ -112,8 +112,9 @@ form {
     line-height: 20px;
     color: #333;
 }
-.carousel-indicators li { background-color: #D4D5D6; width:4%; height:5%; }
-.carousel-indicators .active { background-color: #609f80; width: 4%; height:5%; }
+.carousel-indicators { margin-top:30px;}
+.carousel-indicators li { background-color: #D4D5D6; width:6%; height:2%; }
+.carousel-indicators .active { background-color: #609f80; width: 6%; height:2%; }
 
 .slide-col2 {
     padding-left:50px;
@@ -126,10 +127,10 @@ form {
     padding-bottom: 10px;
 }
 .item p {
-    color:#b4b1b1;
+    color: #ffffff;
 }
 .item a{
-    color:#c9b545;
+    color: #ffffff;
 }
 
 
@@ -143,12 +144,15 @@ form {
 
 .container-fluid {
     /* background: url('../img/vietnam.jpg'); */
-    height:650px;
+    height:700px;
     width:100%;
     z-index: 8000;
     padding-left: 0px;
     padding-right: 0px;
     overflow: hidden;
+}
+.container h1 {
+    color:#ffffff;
 }
 .s4 {
     margin:0px;
@@ -185,7 +189,7 @@ form {
 
 .btnc {
     color:#ffffff;
-    background-color:#f0b30d;
+    background-color:#f29b32;
     height:8.5%; 
     width: 45%;
     font-size:15px;
@@ -193,7 +197,7 @@ form {
 }
 .btnh {
     color:#ffffff;
-    background-color:#f0b30d; 
+    background-color:#ec901b;
     width: 25%;
     margin-left:38%;
     font-size:20px;
@@ -202,11 +206,13 @@ form {
     padding-bottom:15px;
     border-top:5px;
     border-top-color: #ffffff;
+    border-top: 1px solid #f3d0a5;
+    border-bottom: 1px solid #9e7c51;
 }
 
 .btnl {
     color:#ffffff;
-    background-color:#5b6151; 
+    background-color:#f29b32;
     width: 25%;
     margin-left:38%;
     font-size:20px;
@@ -214,11 +220,27 @@ form {
     padding-top:15px;
     padding-bottom:15px;
     border-top:5px;
-    border-top-color: #ffffff;
+    border-top-color: #f3d0a5;
+    border-top: 1px solid #f3d0a5;
+    border-bottom: 1px solid #9e7c51;
+}
+.btnl2 {
+    color:#ffffff;
+    background-color:#0678a8;
+    width: 25%;
+    margin-left:38%;
+    font-size:20px;
+    margin-top:150px;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-top:5px;
+    border-top-color: #0a85cb;
+    border-top: 1px solid #b3e2f3;
+    border-bottom: 1px solid #4d6c9e;
 }
 .btnf {
     color:#ffffff;
-    background-color:#3b7a5b; 
+    background-color:#f29b32;
     width: 25%;
     margin-left:38%;
     font-size:20px;
@@ -226,9 +248,10 @@ form {
     margin-bottom:50px;
     padding-top:15px;
     padding-bottom:15px;
-    border-top:5px;
-    border-top-color: #ffffff;
+    border-top: 1px solid #f3d0a5;
+    border-bottom: 1px solid #9e7c51;
 }
+
 .btnfff {
     color:#ffffff;
     background-color:#3b7a5b; 
@@ -268,17 +291,14 @@ form {
 } */
 
 .bluebg {
-    background-color: #8c9874;
+    background: url(../img/blue2.jpg);
     height:900px;
 }
 
-.blue2bg {
-    background-color: #60a181;
-    
-}
+
 
 .fff {
-    background-color: #4c584e;
+    background-color: #ffffff;
 }
 
 .jour p {
@@ -293,11 +313,11 @@ form {
 }
 
 .s6 h2 {
-    color:#3c443e;
+    color:#ffffff;
     text-align: center;
 }
 .s6 p {
-    color:#3c443e;
+    color:#ffffff;
     text-align: left;
     font-size:15px;
     line-height:25px;
@@ -305,9 +325,9 @@ form {
     padding:8px;
     padding-left:25px;
     padding-right:25px;
+    font-family: 微软雅黑;
 }
 .s6 h3 {
-    color:#3c443e;
     text-align: left;
     font-size:25px;
     margin-top:5px;
@@ -382,7 +402,9 @@ form {
 .thumnail {
     padding-left:15px;
     padding-top:10px;
+
 }
+
 
 .shorthr {
     width:50%;
@@ -544,7 +566,7 @@ form {
 .note {
     height:400px;
     margin-bottom: 20px;
-    background-color:rgba(255,255,255,0.5);
+    background-color:rgba(255,255,255,0.7);
 }
 
 .portrait {
@@ -713,4 +735,100 @@ form {
     display: table-cell;
     vertical-align: bottom;
     height:30px;
+}
+
+.slimmer {
+    margin-top:100px;
+    padding-top:25px;
+    margin-left:25%;
+    width:50%;
+    background-color: rgba(0,0,0,0.2);
+}
+.dropdown-toggle {
+    background: transparent;
+}
+.dropdown-menu {
+    margin-left:1127px;
+    margin-top:-20px;
+    min-width:0px;
+}
+.loginppp {
+    height:850px;
+    width:102%;
+    padding-top:130px;
+    padding-bottom: 250px;
+    padding-left:40%;
+    background-image:url(../img/login4.jpg);
+}
+.loginqqq {
+    background-color:rgba(235,213,92,0.6);
+    height:530px;
+    width:40%;
+    margin-left:42%;
+    border-radius: 20px;
+    padding-right:10px;
+}
+.loginppp h1 {
+    font-family:微软雅黑;
+    padding:10px;
+    padding-top:50px;
+}
+.loginppp p {
+    padding:5px;
+    font-size:16px;
+}
+.form-group1 {
+    padding-top:40px;
+}
+.control-label {
+    border-radius: 25px;
+}
+
+.btn-primary {
+    background-color:#3b67c0;
+    border-color:#3b67c0;
+    height:50px;
+    line-height: 1px;
+    margin-top:40px;
+    margin-left:10px;
+    width:280px;
+    font-size: 20px;
+}
+
+.blue2bg {
+    color:#ffffff;
+    line-height: 24px;
+    font-family: 微软雅黑;
+    background-image:url(../img/nanjing.png);
+}
+.tea {
+    background-image:url(../img/tea2.jpg);
+}
+
+.greenbg {
+    background-color: #98cc31;
+    height:1650px;
+    margin-top:-110px;
+}
+
+.greenbg {
+    background-image:url(../img/tea0.jpg);
+
+}
+.footinfo h2 {
+    padding-right:30px;
+}
+.btnl3 {
+    color:#ffffff;
+    background-color: #73c11c;
+    width: 25%;
+    margin-left:38%;
+    font-size:20px;
+    margin-top:50px;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-top:5px;
+    border-top-color: #46cb2a;
+    border-top: 1px solid #cbf3c2;
+    border-bottom: 1px solid #26550a;
 }

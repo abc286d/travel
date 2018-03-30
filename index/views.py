@@ -3,7 +3,8 @@ from .models import Activity
 
 
 def index(request):
-    return render(request, 'index/index.html')
+    activities = Activity.objects.all()
+    return render(request, 'index/index.html', {"activities": activities})
 
 
 def activity_list(request):
