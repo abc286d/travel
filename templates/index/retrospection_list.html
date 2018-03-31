@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}精彩活动！{% endblock %}
+{% block title %}历史行程！{% endblock %}
 
 {% block content %}
   <div class="container main-body">
@@ -9,11 +9,11 @@
       <div class="span8 s888">
         <section>
           <div class="page-header">
-            <h2>当季热卖</h2>
+            <h2>历史活动</h2>
           </div>
         </section>
         {% for activity in activities %}
-          {% if activity.show == 1 %}
+          {% if activity.show == 2 %}
             <div class="articles articless">
               <div class="article">
                 <div class="row">

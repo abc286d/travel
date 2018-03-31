@@ -3,13 +3,19 @@ from .models import Activity
 
 
 def index(request):
-    activities = Activity.objects.all()
-    return render(request, 'index/index.html', {"activities": activities})
+    hotdeals = Activity.objects.filter(show=1, show2=1)
+    retrospections = Activity.objects.filter(show=2, show2=1)
+    return render(request, 'index/index.html', {"hotdeals": hotdeals, "retrospections": retrospections})
 
 
 def activity_list(request):
     activities = Activity.objects.all()
     return render(request, "index/activity_list.html", {"activities": activities})
+
+
+def retrospection_list(request):
+    activities = Activity.objects.all()
+    return render(request, "index/retrospection_list.html", {"activities": activities})
 
 
 def activity_detail(request, id, slug):

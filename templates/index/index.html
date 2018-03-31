@@ -76,15 +76,15 @@
   <div class="container">
     <h1>Hot Deals</h1>
     <div class="row">
-      {% for activity in activities %}
-        {% if activity.show == 1 and activity.show2 == 1%}
+      {% for hotdeal in hotdeals %}
+        {% if forloop.counter <= 3 %}
           <div class="col-sm-4 s4">
             <div class="whiteboard">
-              <a href="{{ activity.get_absolute_url }}" class="hot"><img src="{{ activity.image.url }}" height=200px; width=100%;/></a>
-              <h2>{{ activity.title }} </h2>
-              <h5><strong>{{ activity.departure_date.month }}/{{ activity.departure_date.month }} {{ activity.departure_date.year }}</strong></h5>
-              <p>{{ activity.description }}</p>
-              <a href="{{ activity.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
+              <a href="{{ hotdeal.get_absolute_url }}" class="hot"><img src="{{ hotdeal.image.url }}" height=200px; width=100%;/></a>
+              <h2>{{ hotdeal.title }} </h2>
+              <h5><strong>{{ hotdeal.departure_date.month }}/{{ hotdeal.departure_date.month }} {{ hotdeal.departure_date.year }}</strong></h5>
+              <p>{{ hotdeal.description }}</p>
+              <a href="{{ hotdeal.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
             </div>
           </div>
         {% endif %}
@@ -100,20 +100,20 @@
     <div class="container">
       <div class="row review1">
         <h1>Retrospection</h1>
-        {% for activity in activities %}
-          {% if activity.show == 2 and activity.show2 == 1%}
+        {% for retrospection in retrospections %}
+          {% if forloop.counter <= 3%}
             <div class="col-sm-4 s4">
               <div class="whiteboard">
-                <a href="{{ activity.get_absolute_url }}" class="hot"><img src="{{ activity.image.url }}" height=200px; width=100%;/></a>
-                <h2>{{ activity.title }} </h2>
-                <h5><strong>{{ activity.departure_date.month }}/{{ activity.departure_date.month }} {{ activity.departure_date.year }}</strong></h5>
-                <p>{{ activity.description }}</p>
-                <a href="{{ activity.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
+                <a href="{{ retrospection.get_absolute_url }}" class="hot"><img src="{{ retrospection.image.url }}" height=200px; width=100%;/></a>
+                <h2>{{ retrospection.title }} </h2>
+                <h5><strong>{{ retrospection.departure_date.month }}/{{ retrospection.departure_date.month }} {{ activity.departure_date.year }}</strong></h5>
+                <p>{{ retrospection.description }}</p>
+                <a href="{{ retrospection.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
               </div>
             </div>
           {% endif %}
         {% endfor %}
-        <a href="{% url "activity:activity_list" %}" class="btn btnl2" role="button"><strong>MORE
+        <a href="{% url "activity:retrospection_list" %}" class="btn btnl2" role="button"><strong>MORE
           ACTIVITIES!</strong></a>
         <div class="footinfo">
           <h4>WeChat Official Accounts :
