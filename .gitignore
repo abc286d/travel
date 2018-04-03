@@ -1,0 +1,14 @@
+
+\.idea/
+
+static_root/
+
+venv/
+
+db\.sqlite3
+
+account/migrations/
+
+index/migrations/
+
+*.py[cod]
