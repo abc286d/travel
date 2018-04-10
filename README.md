@@ -1,5 +1,6 @@
 ## Travel
 **A travelling forum based on python 3.6 and django 2.0.**
+fuck you
 
  1. Clone or download this repo
  2. Run `python -m venv venv` in the working directory to create virtual environments
