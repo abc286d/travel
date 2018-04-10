@@ -7,8 +7,6 @@ venv/
 
 db\.sqlite3
 
-account/migrations/
-
-index/migrations/
+*/migrations/
 
 *.py[cod]
