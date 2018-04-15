@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}溪牛乐玩论坛！{% endblock %}
+
+{% block content %}
+<body class="tea">
+
+<div class="container jourhead">
+  <div class="row">
+    <div class="span1 emptyy"></div>
+    <div class="span10 fulll">
+      <section>
+        <div class="page-header midd">
+          <h2>和世界分享你的新位置</h2>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="container journal">
+  <div class="row">
+    <div class="span emptyy"></div>
+    <div class="span10 fullll">
+      <section>
+        <div class="note">
+          <div class="container">
+            <div class="row">
+              <div class="span2 writer">
+                <div class="portrait"><img src="img/timg.jpg" alt="Story2"></div>
+                <div class="naming">
+                  我是用户名
+                </div>
+                <div class="timing">
+                  2018-3-25 11:00
+                </div>
+              </div>
+              <div class="span6">
+                <div class="photo">
+                  我是照片
+                  <img src="">
+                </div>
+                <div class="photohead">
+                  <a href="#"><strong>我是标题我是标题我是标题</strong></a>
+                </div>
+              </div>
+              <div class="span2">
+                <div class="likecomment" id="lc1">
+                  <div class="like"><a href="#lc1"><img onmouseover="biglike()" onmouseout="smalllike()"
+                                                        onclick="changelike()" src="img/like.png" id="liking"></a>number
+                  </div>
+                  <div class="comment"><a href="#"><img src="img/comment.png"></a>number</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+</body>
+{% endblock %}

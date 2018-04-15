@@ -1,12 +1,14 @@
 
 \.idea/
 
-static_root/
+/static_root/
 
-venv/
+/venv/
 
 db\.sqlite3
 
-*/migrations/
+migrations/
+
+!migrations/__init__.py
 
 *.py[cod]
