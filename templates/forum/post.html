@@ -14,14 +14,14 @@
               <div class="portrait3"><img src="{% static 'img/timg.jpg'%}"></div>
             </div>
             <div class="span6">
-              <p>{{ post.author }} {{ post.created_at }}
+              <p>{{ post.author.user.username }} {{ post.created_at }}
               <p>
             </div>
           </div>
           <hr>
         </div>
         <div class="myphoto">
-          <img src="{% static 'img/lianshan.jpg'%}">
+          <img src="{{ post.image.url }}">
         </div>
         <div class="describetext">
           <p>
@@ -64,7 +64,7 @@
             </div>
             <ul>
                 {% for foo in author_other %}
-                    <li><a href="/forum/post_detial/#foo.id/">{{ foo.title }}</a></li>
+                    <li><a href="{{ foo.get_absolute_url }}">{{ foo.title }}</a></li>
                 {% endfor %}
             </ul>
           </section>

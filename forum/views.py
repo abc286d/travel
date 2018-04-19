@@ -5,9 +5,10 @@ from django.template.loader import get_template
 
 from .models import Post
 
+
 # Create your views here
 
-def activity_list(request):
+def post_list(request):
     posts = Post.objects.all()
     template = get_template('forum/forum.html')
 
@@ -15,7 +16,8 @@ def activity_list(request):
 
     return HttpResponse(html)
 
-def post_detial(request,id):
+
+def post_detail(request, id):
     post = get_object_or_404(Post, id=id)
     author_other = Post.objects.filter(author=post.author)
     template = get_template('forum/post.html')

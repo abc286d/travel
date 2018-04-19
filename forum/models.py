@@ -29,7 +29,7 @@ class Post(models.Model):
         return u'%s 发表了主题《%s》' % (self.author, self.title)
 
     def get_absolute_url(self):
-        return "/forum/post_detial/%i/" % self.id
+        return "/forum/post_detail/%i/" % self.id
 
 
 

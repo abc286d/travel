@@ -38,11 +38,10 @@
               </div>
               <div class="span6">
                 <div class="photo">
-                  {{ p.image }}
-                  <img src="">
+                    <img src="{{ p.image.url }}">
                 </div>
                 <div class="photohead">
-                  <a href="forum/post_detial/#p.id"><strong>{{ p.title }}</strong></a>
+                  <a href="{{ p.get_absolute_url }}"><strong>{{ p.title }}</strong></a>
                 </div>
               </div>
               <div class="span2">
