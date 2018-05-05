@@ -24,8 +24,9 @@
           <img src="{{ post.image.url }}">
         </div>
         <div class="describetext">
-          <p>
+          {% autoescape off %}
             {{ post.content }}
+          {% endautoescape %}
         </div>
         <div class="likcom">
           <img src="{% static 'img/comment.png'%}"><img src="{% static 'img/like.png'%}">

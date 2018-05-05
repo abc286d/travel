@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
     SEX_CHOICES = (
-        ("M", "汉子"),
-        ("F", "妹子"),
+        ("M", "男"),
+        ("F", "女"),
     )
 
     user = models.OneToOneField(User, models.CASCADE, unique=True)
