@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
 from slugify import slugify
-from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Activity(models.Model):
@@ -12,7 +11,7 @@ class Activity(models.Model):
     departure_date = models.DateField('活动时间', default=timezone.now)
     description = models.TextField(default="请在此处填写活动简介，此简介将显示在首页")
     description2 = models.TextField(default="请在此处填写活动简介，此简介将展示在活动列表页面")
-    body = RichTextUploadingField(default='请在此处添加具体文章')
+    body = models.TextField(default='请在此处添加具体文章')
 
     SHOW_CHOICES = (
         (1, "当季热卖"),

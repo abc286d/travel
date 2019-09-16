@@ -18,7 +18,7 @@
     </div>
   </div>
 </div>
-
+{% for p in posts %}
 <div class="container journal">
   <div class="row">
     <div class="span emptyy"></div>
@@ -30,19 +30,18 @@
               <div class="span2 writer">
                 <div class="portrait"><img src="img/timg.jpg" alt="Story2"></div>
                 <div class="naming">
-                  我是用户名
+                  {{ p.author.user.username }}
                 </div>
                 <div class="timing">
-                  2018-3-25 11:00
+                  {{ p.update_at }}
                 </div>
               </div>
               <div class="span6">
                 <div class="photo">
-                  我是照片
-                  <img src="">
+                    <img src="{{ p.image.url }}">
                 </div>
                 <div class="photohead">
-                  <a href="#"><strong>我是标题我是标题我是标题</strong></a>
+                  <a href="{{ p.get_absolute_url }}"><strong>{{ p.title }}</strong></a>
                 </div>
               </div>
               <div class="span2">
@@ -61,7 +60,7 @@
     </div>
   </div>
 </div>
-
+{% endfor %}
 
 </body>
 {% endblock %}

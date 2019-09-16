@@ -1,14 +1,19 @@
 
 \.idea/
 
+\.vscode/
+
 /static_root/
+
+/.venv/
 
 /venv/
 
 db\.sqlite3
 
-migrations/
-
-!migrations/__init__.py
+# django migrations 
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
 
 *.py[cod]

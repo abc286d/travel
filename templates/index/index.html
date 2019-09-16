@@ -4,133 +4,214 @@
 {% block title %}溪牛乐玩！{% endblock %}
 
 {% block content %}
-  <div class="container-fluid">
-    <div id="carousel_box" class="carousel slide">
+  <div class="container-fluid" id="gundong">
+    <div id="carousel_box" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel_box" data-slide-to="0" class="active"></li>
         <li data-target="#carousel_box" data-slide-to="1"></li>
         <li data-target="#carousel_box" data-slide-to="2"></li>
         <li data-target="#carousel_box" data-slide-to="3"></li>
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <div class="slide-col2">
-            <h2>国际旅行</h2>
-            <div class="row">
-              <div class="span5">
-                <p>出国旅行超级好玩好玩好玩</p>
-                <p>风景优美花钱如流水而且没假期假期假期</p>
-                <p>周边小国是我们的项目北海道大阪韩国越南台湾等等</p>
-                <a class="more" href="#" target="_blank"><strong>了解国际旅行</strong></a>
-              </div>
-            </div>
-          </div>
           <a href="#"><img src="{% static 'img/yelin2.jpg' %}"/></a>
+          <div class="carousel-caption">
+            <h2>国际旅行</h2>
+            <p>出国旅行超级好玩好玩好玩</p>
+            <p>风景优美花钱如流水而且没假期假期假期</p>
+            <p>周边小国是我们的项目北海道大阪韩国越南台湾等等</p>
+            <a class="more" href="#" target="_blank"><strong>了解国际旅行</strong></a>
+          </div>
+        </div>
 
-        </div>
         <div class="item">
-          <div class="slide-col2">
-            <h2>国内旅行</h2>
-            <div class="row">
-              <div class="span5">
-                <p>国内旅行超级好玩好玩好玩</p>
-                <p>风景优美花钱不多而且不用办签证签证</p>
-                <p>全国各省是我们的项目江西云南四川新疆等等等等</p>
-                <a class="more" href="#" target="_blank"><strong>了解国内旅行</strong></a>
-              </div>
-            </div>
-          </div>
           <a href="#"><img src="{% static "img/yading3.jpg" %}"/></a>
+          <div class="carousel-caption">
+            <h2>国内旅行</h2>
+            <p>国内旅行超级好玩好玩好玩</p>
+            <p>风景优美花钱不多而且不用办签证签证</p>
+            <p>全国各省是我们的项目江西云南四川新疆等等等等</p>
+            <a class="more" href="#" target="_blank"><strong>了解国内旅行</strong></a>
+          </div>
         </div>
+
         <div class="item">
-          <div class="slide-col2">
+          <a href="#"><img src="{% static "img/huangshan.jpg" %}"/></a>
+          <div class="carousel-caption">
             <h2>周边旅行</h2>
-            <div class="row">
-              <div class="span5">
-                <p>周边旅行超级好玩好玩好玩</p>
-                <p>风景优美花钱很少而且没假期都可以玩玩玩</p>
-                <p>省内和邻省是我们的项目等等等等</p>
-                <a class="more" href="#" target="_blank"><strong>了解周边旅行</strong></a>
-              </div>
-            </div>
+            <p>周边旅行超级好玩好玩好玩</p>
+            <p>风景优美花钱很少而且没假期都可以玩玩玩</p>
+            <p>省内和邻省是我们的项目等等等等</p>
+            <a class="more" href="#" target="_blank"><strong>了解周边旅行</strong></a>
           </div>
-          <a href="#"><img src="{% static 'img/huangshan.jpg' %}"/></a>
         </div>
+
         <div class="item">
-          <div class="slide-col2">
+          <a href="#"><img src="{% static "img/liuhe3.jpg" %}"/></a>
+          <div class="carousel-caption">
             <h2>市内活动</h2>
-            <div class="row">
-              <div class="span5">
-                <p>市内活动超级好玩好玩好玩</p>
-                <p>风景优美花钱很少而且随时随地都可以玩玩玩</p>
-                <p>满足各种文青和没朋友没假期的年轻人放飞自我的愿望</p>
-                <a class="more" href="#" target="_blank"><strong>了解市内旅行</strong></a>
-              </div>
-            </div>
+            <p>市内活动超级好玩好玩好玩</p>
+            <p>风景优美花钱很少而且随时随地都可以玩玩玩</p>
+            <p>满足各种文青和没朋友没假期的年轻人放飞自我的愿望</p>
+            <a class="more" href="#" target="_blank"><strong>了解市内旅行</strong></a>
           </div>
-          <a href="#"><img src="{% static 'img/liuhe3.jpg' %}"/></a>
         </div>
       </div>
+
     </div>
   </div>
-  <div class="container">
+
+
+  <div class="container hot-new">
     <h1>Hot Deals</h1>
+    <div class="row my-row">
+      <ul class="bxslider" id="bx1">
+        {% for hotdeal in hotdeals %}
+          {% if forloop.counter <= 4 %}
+            <li>
+              <div class="whiteboard">
+                <a href="{{ hotdeal.get_absolute_url }}" class="hot"><img src="{{ hotdeal.image.url }}" height=200px;
+                                                                          width=100%;/></a>
+                <h2>{{ hotdeal.title }} </h2>
+                <h5>
+                  <strong>{{ hotdeal.departure_date.month }}/{{ hotdeal.departure_date.day }} {{ hotdeal.departure_date.year }}</strong>
+                </h5>
+                <p>{{ hotdeal.description }}</p>
+                <a href="{{ hotdeal.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For
+                  Me!</strong></a>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+    </div>
+
     <div class="row">
-      {% for hotdeal in hotdeals %}
-        {% if forloop.counter <= 3 %}
-          <div class="col-sm-4 s4">
-            <div class="whiteboard">
-              <a href="{{ hotdeal.get_absolute_url }}" class="hot"><img src="{{ hotdeal.image.url }}" height=200px; width=100%;/></a>
-              <h2>{{ hotdeal.title }} </h2>
-              <h5><strong>{{ hotdeal.departure_date.month }}/{{ hotdeal.departure_date.month }} {{ hotdeal.departure_date.year }}</strong></h5>
-              <p>{{ hotdeal.description }}</p>
-              <a href="{{ hotdeal.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
       <a href="{% url "activity:activity_list" %}" class="btn btnh" role="button"><strong>MORE ACTIVITIES!</strong></a>
+    </div>
+    <div class="row">
       <div class="footinfo">
         <h4>WeChat Official Accounts: </h4>
         <h2><strong>xiniujoy</strong></h2>
       </div>
     </div>
   </div>
-  <div class="bluebg">
-    <div class="container">
-      <div class="row review1">
-        <h1>Retrospection</h1>
-        {% for retrospection in retrospections %}
-          {% if forloop.counter <= 3%}
-            <div class="col-sm-4 s4">
+
+  {#  <div class="container hot-new">#}
+  {#    <h1>Hot Deals</h1>#}
+  {#    <div class="row">#}
+  {#      {% for hotdeal in hotdeals %}#}
+  {#        {% if forloop.counter <= 3 %}#}
+  {#          <div class="col-sm-4 s4">#}
+  {#            <div class="whiteboard">#}
+  {#              <a href="{{ hotdeal.get_absolute_url }}" class="hot"><img src="{{ hotdeal.image.url }}" height=200px;#}
+  {#                                                                        width=100%;/></a>#}
+  {#              <h2>{{ hotdeal.title }} </h2>#}
+  {#              <h5>#}
+  {#                <strong>{{ hotdeal.departure_date.month }}/{{ hotdeal.departure_date.month }} {{ hotdeal.departure_date.year }}</strong>#}
+  {#              </h5>#}
+  {#              <p>{{ hotdeal.description }}</p>#}
+  {#              <a href="{{ hotdeal.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For#}
+  {#                Me!</strong></a>#}
+  {#            </div>#}
+  {#          </div>#}
+  {#        {% endif %}#}
+  {#      {% endfor %}#}
+  {#    </div>#}
+  {#    <div class="row">#}
+  {#      <a href="{% url "activity:activity_list" %}" class="btn btnh" role="button"><strong>MORE ACTIVITIES!</strong></a>#}
+  {#    </div>#}
+  {#    <div class="row">#}
+  {#      <div class="footinfo">#}
+  {#        <h4>WeChat Official Accounts: </h4>#}
+  {#        <h2><strong>xiniujoy</strong></h2>#}
+  {#      </div>#}
+  {#    </div>#}
+  {#  </div>#}
+
+  <div class="container bluebg">
+{#  <div class="container ">#}
+    <h1>Retrospection</h1>
+    <div class="row my-row">
+      <ul class="bxslider">
+       {% for retrospection in retrospections %}
+          {% if forloop.counter <= 3 %}
+            <li>
               <div class="whiteboard">
-                <a href="{{ retrospection.get_absolute_url }}" class="hot"><img src="{{ retrospection.image.url }}" height=200px; width=100%;/></a>
+                <a href="{{ retrospection.get_absolute_url }}" class="hot"><img src="{{ retrospection.image.url }}"
+                                                                                height=200px; width=100%;/></a>
                 <h2>{{ retrospection.title }} </h2>
-                <h5><strong>{{ retrospection.departure_date.month }}/{{ retrospection.departure_date.month }} {{ activity.departure_date.year }}</strong></h5>
+                <h5>
+                  <strong>{{ retrospection.departure_date.month }}/{{ retrospection.departure_date.day }} {{ activity.departure_date.year }}</strong>
+                </h5>
                 <p>{{ retrospection.description }}</p>
-                <a href="{{ retrospection.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For Me!</strong></a>
+                <a href="{{ retrospection.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For
+                  Me!</strong></a>
               </div>
-            </div>
+            </li>
           {% endif %}
         {% endfor %}
+      </ul>
+    </div>
+{#    第二个more activities 按钮   #}
+      <div class="row">
         <a href="{% url "activity:retrospection_list" %}" class="btn btnl2" role="button"><strong>MORE
           ACTIVITIES!</strong></a>
+      </div>
+      <div class="row">
         <div class="footinfo">
-          <h4>WeChat Official Accounts :
-            <h4>
-              <h2><strong>xiniujoy</strong></h2>
+          <h4>WeChat Official Accounts :</h4>
+          <h2><strong>xiniujoy</strong></h2>
         </div>
       </div>
     </div>
-  </div>
 
-
+{#以前写的这一部分#}
+{#  <div class="bluebg">#}
+{#    <div class="container">#}
+{#      <div class="row review1">#}
+{#        <h1>Retrospection</h1>#}
+{#        {% for retrospection in retrospections %}#}
+{#          {% if forloop.counter <= 3 %}#}
+{#            <div class="col-sm-4 s4">#}
+{#              <div class="whiteboard">#}
+{#                <a href="{{ retrospection.get_absolute_url }}" class="hot"><img src="{{ retrospection.image.url }}"#}
+{#                                                                                height=200px; width=100%;/></a>#}
+{#                <h2>{{ retrospection.title }} </h2>#}
+{#                <h5>#}
+{#                  <strong>{{ retrospection.departure_date.month }}/{{ retrospection.departure_date.month }} {{ activity.departure_date.year }}</strong>#}
+{#                </h5>#}
+{#                <p>{{ retrospection.description }}</p>#}
+{#                <a href="{{ retrospection.get_absolute_url }}" class="btn btnc" role="button"><strong>That's For#}
+{#                  Me!</strong></a>#}
+{#              </div>#}
+{#            </div>#}
+{#          {% endif %}#}
+{#        {% endfor %}#}
+{#      </div>#}
+{##}
+{##}
+{##}
+{#    第二个more activities 按钮   #}
+{#      <div class="row">#}
+{#        <a href="{% url "activity:retrospection_list" %}" class="btn btnl2" role="button"><strong>MORE#}
+{#          ACTIVITIES!</strong></a>#}
+{#      </div>#}
+{#      <div class="row">#}
+{#        <div class="footinfo">#}
+{#          <h4>WeChat Official Accounts :</h4>#}
+{#          <h2><strong>xiniujoy</strong></h2>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
 
   <div class="greenbg">
     <div class="container jourhead">
       <div class="row">
-        <div class="span1 emptyy"></div>
-        <div class="span10 fulll">
+        <div class="col-md-1 emptyy"></div>
+        <div class="col-md-10 fulll">
           <section>
             <div class="page-header midd">
               <h1>SHARE</h1>
@@ -142,12 +223,12 @@
     <div class="container journal">
       <div class="row">
         <div class="span emptyy"></div>
-        <div class="span10 fullll">
+        <div class="col-md-10 fullll">
           <section>
             <div class="note">
               <div class="container">
                 <div class="row">
-                  <div class="span2 writer">
+                  <div class="col-md-2 writer">
                     <div class="portrait"><img src="{% static "img/timg.jpg" %}" alt="Story2"></div>
                     <div class="naming">
                       我是用户名
@@ -156,7 +237,7 @@
                       2018-3-25 11:00
                     </div>
                   </div>
-                  <div class="span6">
+                  <div class="col-md-6">
                     <div class="photo">
                       我是照片
                       <img src="">
@@ -165,7 +246,7 @@
                       <a href="#"><strong>我是标题我是标题我是标题</strong></a>
                     </div>
                   </div>
-                  <div class="span2">
+                  <div class="col-md-2">
                     <div class="likecomment" id="lc1">
                       <div class="like"><a href="#lc1"><img onmouseover="biglike()" onmouseout="smalllike()"
                                                             onclick="changelike()" src="{% static "img/like.png" %}"
@@ -183,7 +264,7 @@
             <div class="note">
               <div class="container">
                 <div class="row">
-                  <div class="span2 writer">
+                  <div class="col-md-2 writer">
                     <div class="portrait"><img src="{% static "img/timg.jpg" %}" alt="Story2"></div>
                     <div class="naming">
                       我是用户名
@@ -192,7 +273,7 @@
                       2018-3-25 11:00
                     </div>
                   </div>
-                  <div class="span6">
+                  <div class="col-md-6">
                     <div class="photo">
                       我是照片
                       <img src="">
@@ -201,7 +282,7 @@
                       <a href="#"><strong>我是标题我是标题我是标题</strong></a>
                     </div>
                   </div>
-                  <div class="span2">
+                  <div class="col-md-2">
                     <div class="likecomment" id="lc1">
                       <div class="like"><a href="#lc1"><img onmouseover="biglike()" onmouseout="smalllike()"
                                                             onclick="changelike()" src="{% static "img/like.png" %}"
@@ -219,7 +300,7 @@
             <div class="note">
               <div class="container">
                 <div class="row">
-                  <div class="span2 writer">
+                  <div class="col-md-2 writer">
                     <div class="portrait"><img src="{% static "img/timg.jpg" %}" alt="Story2"></div>
                     <div class="naming">
                       我是用户名
@@ -228,7 +309,7 @@
                       2018-3-25 11:00
                     </div>
                   </div>
-                  <div class="span6">
+                  <div class="col-md-6">
                     <div class="photo">
                       我是照片
                       <img src="">
@@ -237,7 +318,7 @@
                       <a href="#"><strong>我是标题我是标题我是标题</strong></a>
                     </div>
                   </div>
-                  <div class="span2">
+                  <div class="col-md-2">
                     <div class="likecomment" id="lc1">
                       <div class="like"><a href="#lc1"><img onmouseover="biglike()" onmouseout="smalllike()"
                                                             onclick="changelike()" src="{% static "img/like.png" %}"
@@ -269,16 +350,16 @@
       <div class="row jour">
         <h1>Get To Know XINIUJOY!</h1>
         <p class="eve">Every journey begins with the first step</p>
-        <div class="span6 s6">
+        <div class="col-md-6 s6">
           <div class="row">
-            <div class="span5">
+            <div class="col-md-5">
               <h3><strong>成员的话：</strong></h3>
               <hr>
               <div class="row">
                 <div class="span">
                   <div class="span potrait"><img src="{% static "img/yinsang.jpg" %}" alt="Story2"></div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                   <div class="quote">
                     “非常好非常好非常好非常好非,好非常好非,常好非常好非常好非常好非常好,非常好非常好非常好非常,好,非常好非常好非常好非,常好非常好非常好非常好非常好非常好,非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好sdasasfasfsasffbbfafaef”
                   </div>
@@ -290,7 +371,7 @@
                 <div class="span">
                   <div class="span potrait"><img src="{% static "img/shenle.jpg" %}" alt="Story2"></div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                   <div class="quote">
                     “嘻,嘻嘻嘿嘿嘿嘻嘻,嘿嘿嘿嘻嘻嘿嘿,嘿嘻嘻嘿嘿常好非常好非常好非常好非常,好非常好非常好非常好非常好非常,好非常好非常好非常好非常好非,常好非常好非常好非,常好非常好非常好非常好非常好非常好sdasasfasfsasffbbfafaef”
                   </div>
@@ -302,7 +383,7 @@
                 <div class="span">
                   <div class="span potrait"><img src="{% static "img/xinba.jpeg" %}" alt="Story2"></div>
                 </div>
-                <div class="span4">
+                <div class="col-md-4">
                   <div class="quote">
                     “嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿,嘻嘻嘿嘿嘿嘻嘻嘿嘿嘿,嘻嘻嘿嘿嘿常好非常好非常好非常好非常好非常,好非常好非常好,非常常好非常好非常好非常好非常好非常好非常,好非常好非常好非常好非常好非常好非常好非常好sdasasfasfsasffbbfafaef”
                   </div>
@@ -314,10 +395,10 @@
             <div class="span"></div>
           </div>
         </div>
-        <div class="span6 s6">
+        <div class="col-md-6 s6">
           <div class="row">
             <div class="span"></div>
-            <div class="span5">
+            <div class="col-md-5">
               <h2><strong>我们的故事</strong></h2>
               <hr>
               <p>溪牛乐玩成立于2010年4月（原南京暴走团）在豆瓣平台上是南京成立最早的徒步\旅行组织。从成立开始，我们视声誉为生命。</p>

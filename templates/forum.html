@@ -1,116 +1,113 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>案例实战</title>
-<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-<link href="css/travel.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <title>案例实战</title>
+  <script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+  <link href="css/travel.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <script language="javascript">
-    function changelike()
-        {
-        document.getElementById("liking").src ="img/likered.png";
-        }
+    function changelike() {
+        document.getElementById("liking").src = "img/likered.png";
+    }
 </script>
 
 <script language="javascript">
-    function biglike()
-        {
-        if (document.getElementById("liking").src !="img/likered.png")
-            {
-            document.getElementById("liking").src ="img/likebig.png";
-            }
+    function biglike() {
+        if (document.getElementById("liking").src != "img/likered.png") {
+            document.getElementById("liking").src = "img/likebig.png";
         }
-    function smalllike()
-        {
-        if (document.getElementById("liking").src !="img/likered.png")
-            {
-            document.getElementById("liking").src ="img/like.png";
-            }
+    }
+
+    function smalllike() {
+        if (document.getElementById("liking").src != "img/likered.png") {
+            document.getElementById("liking").src = "img/like.png";
         }
+    }
 </script>
 
 
-
 <body class="tea">
-    <div id="page-head2" class="clearfix">
-        <div class="pull-left" id="flaat">
-            <strong>
-            <a href="#"><img src="img/logo.png"></a>
-            <ul class="navg">
-                <li><a href="travel.html">INDEX</a></li>
-                <li><a href="hotlist.html" >DESTINATION</a></li>
-                <li><a href="retrospect.html" >REVIEW</a></li>
-                <li><a href="#">JOIN US</a></li>
-            </ul>
-            </strong>
-            <div class="signre">
-                    <a id="signup" href="#">Sign up</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="register" href="#">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="search" href="#"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;</a>
-            </div>
-            <form>
-                <input type="text" value="黄山"  id="ser">
-            </form> 
-        </div>
+<div id="page-head2" class="clearfix">
+  <div class="pull-left" id="flaat">
+    <strong>
+      <a href="#"><img src="img/logo.png"></a>
+      <ul class="navg">
+        <li><a href="travel.html">INDEX</a></li>
+        <li><a href="hotlist.html">DESTINATION</a></li>
+        <li><a href="retrospect.html">REVIEW</a></li>
+        <li><a href="#">JOIN US</a></li>
+      </ul>
+    </strong>
+    <div class="signre">
+      <a id="signup" href="#">Sign up</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="register" href="#">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            id="search" href="#"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;</a>
     </div>
+    <form>
+      <input type="text" value="黄山" id="ser">
+    </form>
+  </div>
+</div>
 
-    
-    <div class="container jourhead">
+
+<div class="container jourhead">
+  <div class="row">
+    <div class="span1 emptyy"></div>
+    <div class="span10 fulll">
+      <section>
+        <div class="page-header midd">
+          <h2>和世界分享你的新位置</h2>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="container journal">
+  <div class="row">
+    <div class="span emptyy"></div>
+    <div class="span10 fullll">
+      <section>
+        <div class="note">
+          <div class="container">
             <div class="row">
-                <div class="span1 emptyy"></div>
-                <div class="span10 fulll">
-                    <section>
-                        <div class="page-header midd">
-                            <h2>和世界分享你的新位置</h2>
-                        </div>
-                    </section>
+              <div class="span2 writer">
+                <div class="portrait"><img src="img/timg.jpg" alt="Story2"></div>
+                <div class="naming">
+                  我是用户名
                 </div>
+                <div class="timing">
+                  2018-3-25 11:00
+                </div>
+              </div>
+              <div class="span6">
+                <div class="photo">
+                  我是照片
+                  <img src="">
+                </div>
+                <div class="photohead">
+                  <a href="#"><strong>我是标题我是标题我是标题</strong></a>
+                </div>
+              </div>
+              <div class="span2">
+                <div class="likecomment" id="lc1">
+                  <div class="like"><a href="#lc1"><img onmouseover="biglike()" onmouseout="smalllike()"
+                                                        onclick="changelike()" src="img/like.png" id="liking"></a>number
+                  </div>
+                  <div class="comment"><a href="#"><img src="img/comment.png"></a>number</div>
+                </div>
+              </div>
             </div>
-    </div>
-    <div class="container journal">
-        <div class="row">
-            <div class="span emptyy"></div>
-            <div class="span10 fullll">
-                <section>
-                    <div class="note">
-                        <div class="container">
-                        <div class="row">
-                            <div class="span2 writer">
-                                <div class="portrait"><img src="img/timg.jpg" alt="Story2"></div>
-                                <div class="naming">
-                                    我是用户名
-                                </div>
-                                <div class="timing">
-                                    2018-3-25 11:00
-                                </div>
-                            </div>
-                            <div class="span6">
-                                <div class="photo">
-                                   我是照片
-                                   <img src="">
-                                </div>
-                                <div class="photohead">
-                                    <a href="#"><strong>我是标题我是标题我是标题</strong></a>
-                                </div>
-                            </div>
-                            <div class="span2">
-                                <div class="likecomment" id="lc1">
-                                    <div  class="like" ><a href="#lc1" ><img onmouseover="biglike()" onmouseout="smalllike()" onclick="changelike()" src="img/like.png" id="liking"></a>number</div>
-                                    <div class="comment"><a href="#"><img src="img/comment.png"></a>number</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        </div>                        
-                    </div>
-                </section>        
-            </div>
-        </div>
-    </div>
 
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
 
 
 </body>

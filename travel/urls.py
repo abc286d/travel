@@ -24,7 +24,7 @@ urlpatterns = [
     path('', views.index),
     path('activity/', include('index.urls')),
     path('account/', include('account.urls')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('summernote/', include('django_summernote.urls')),
     path('forum/', include('forum.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

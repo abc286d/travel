@@ -4,6 +4,8 @@ import datetime
 from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
+
 from account.models import UserProfile
 
 
@@ -20,11 +22,14 @@ class Post(models.Model):
         ordering = ['-created_at']
         verbose_name_plural = u'主题'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     def description(self):
         return u'%s 发表了主题《%s》' % (self.author, self.title)
+
+    def get_absolute_url(self):
+        return "/forum/post_detail/%i/" % self.id
 
 
 class Comment(models.Model):

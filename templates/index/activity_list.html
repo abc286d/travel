@@ -6,7 +6,7 @@
 {% block content %}
   <div class="container main-body">
     <div class="row">
-      <div class="span8 s888">
+      <div class="col-md-8 s888">
         <section>
           <div class="page-header">
             <h2>当季热卖</h2>
@@ -17,10 +17,10 @@
             <div class="articles articless">
               <div class="article">
                 <div class="row">
-                  <div class="span2">
+                  <div class="col-md-2">
                     <div class="thumnail"><img src="{{ activity.image.url }}" height=150px; width=100%;/></div>
                   </div>
-                  <div class="span6 pp">
+                  <div class="col-md-6 pp">
                     <div class="titleh"><a href="{{ activity.get_absolute_url }}"><strong>{{ activity.title }}</strong></a>
                     </div>
                     <div class="infoh"><span>DEPARTURE</span>
@@ -32,7 +32,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="data row"><span class="span6"></span> <span class="span2"> <span class="item"> <i
+                <div class="data row"><span class="c0l-md-6"></span> <span class="c0l-md-2"> <span class="item"> <i
                         class="icon-tags"></i> <span></span> </span> <span class="item"> <i
                         class="icon-list-alt"></i> <a
                         href="{{ activity.get_absolute_url }}" class="btn btnh"
@@ -43,7 +43,7 @@
         {% endfor %}
       </div>
       <div class="span"></div>
-      <div class="span3 width5">
+      <div class="col-md-3 width5">
         <div class="opbg">
           <section>
             <div class="page-header">
@@ -75,3 +75,76 @@
     </div>
   </div>
 {% endblock %}
+
+{#{% block content %}#}
+{#  <div class="container main-body">#}
+{#    <div class="row">#}
+{#      <div class="span8 s888">#}
+{#        <section>#}
+{#          <div class="page-header">#}
+{#            <h2>当季热卖</h2>#}
+{#          </div>#}
+{#        </section>#}
+{#        {% for activity in activities %}#}
+{#          {% if activity.show == 1 %}#}
+{#            <div class="articles articless">#}
+{#              <div class="article">#}
+{#                <div class="row">#}
+{#                  <div class="span2">#}
+{#                    <div class="thumnail"><img src="{{ activity.image.url }}" height=150px; width=100%;/></div>#}
+{#                  </div>#}
+{#                  <div class="span6 pp">#}
+{#                    <div class="titleh"><a href="{{ activity.get_absolute_url }}"><strong>{{ activity.title }}</strong></a>#}
+{#                    </div>#}
+{#                    <div class="infoh"><span>DEPARTURE</span>#}
+{#                      <span>{{ activity.departure_date.month }}/{{ activity.departure_date.month }} {{ activity.departure_date.year }}</span>#}
+{#                    </div>#}
+{#                    <hr class="shorthr">#}
+{#                    <div class="summaryh">#}
+{#                      {{ activity.description2 }}#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="data row"><span class="span6"></span> <span class="span2"> <span class="item"> <i#}
+{#                        class="icon-tags"></i> <span></span> </span> <span class="item"> <i#}
+{#                        class="icon-list-alt"></i> <a#}
+{#                        href="{{ activity.get_absolute_url }}" class="btn btnh"#}
+{#                        role="button"><strong>MORE details</strong></a> </span> </span></div>#}
+{#              </div>#}
+{#            </div>#}
+{#          {% endif %}#}
+{#        {% endfor %}#}
+{#      </div>#}
+{#      <div class="span"></div>#}
+{#      <div class="span3 width5">#}
+{#        <div class="opbg">#}
+{#          <section>#}
+{#            <div class="page-header">#}
+{#              <h3>人气排行</h3>#}
+{#            </div>#}
+{#          </section>#}
+{#          <section class="hotpad">#}
+{#            <h4>当季行程</h4>#}
+{#            <ul>#}
+{#              {% for activity in activities %}#}
+{#                {% if activity.show == 1 %}#}
+{#                  <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>#}
+{#                {% endif %}#}
+{#              {% endfor %}#}
+{#            </ul>#}
+{#          </section>#}
+{#          <section>#}
+{#            <h4>历史行程</h4>#}
+{#            <ul>#}
+{#              {% for activity in activities %}#}
+{#                {% if activity.show == 2 %}#}
+{#                  <li><a href="{{ activity.get_absolute_url }}">{{ activity.title }}</a></li>#}
+{#                {% endif %}#}
+{#              {% endfor %}#}
+{#            </ul>#}
+{#          </section>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#{% endblock %}#}

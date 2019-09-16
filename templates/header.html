@@ -1,42 +1,191 @@
 {% load staticfiles %}
-<div id="page-head" class="clearfix">
-  <div class="pull-left" id="flaat">
-    <strong>
-      <a href="\"><img src='{% static "img/logo2.png" %}'></a>
-      <ul class="navg">
-        <li><a href="\">INDEX</a></li>
-        <li><a href="{% url "activity:activity_list" %}">DESTINATION</a></li>
-        <li><a href="{% url "activity:retrospection_list" %}">REVIEW</a></li>
-        <li><a href="#">FORUM</a></li>
-        <li><a href="#" onclick="openWindow()">JOIN US</a></li>
-      </ul>
-    </strong>
-    <div class="signre">
-        {% if user.is_authenticated %}
-            <button class="btn btn-default dropdown-toggle" type="button"
-                                    id="dropdownMenu" data-toggle="dropdown">
-                            {{ user.username }}<span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="{% url "account:password_change" %}">更改密码</a></li>
-                                <li><a href="{% url "account:my_information" %}">个人信息</a></li>
-                            </ul>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a id="register" href="{% url 'account:user_logout' %}">Log out</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
-            id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>
-        {% else %}
-      <a id="signup" href="{% url 'account:user_login' %}">Log in</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a id="register" href="{% url 'account:user_register' %}">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
-            id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>
-        {% endif %}
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="\"><img src='{% static "img/logo2.png" %}'/></a>
+
     </div>
-    <form>
-      <input type="text" value="黄山" id="ser">
-    </form>
-  </div>
-</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="\">INDEX</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url "activity:activity_list" %}">DESTINATION</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url "activity:retrospection_list" %}">REVIEW</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url "forum:post_list" %}">FORUM</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" id="joinButton">JOIN US</a>
+        </li>
+      </ul>
+{#          <div class="signre">#}
+{#      {% if user.is_authenticated %}#}
+{#        <button class="btn btn-default dropdown-toggle" type="button"#}
+{#                id="dropdownMenu" data-toggle="dropdown">#}
+{#          {{ user.username }}<span class="caret"></span></button>#}
+{#        <ul class="dropdown-menu">#}
+{#          <li><a href="{% url "account:password_change" %}">更改密码</a></li>#}
+{#          <li><a href="{% url "account:my_information" %}">个人信息</a></li>#}
+{#        </ul>#}
+{#        &nbsp;&nbsp;|&nbsp;&nbsp;#}
+{#        <a id="register" href="{% url 'account:user_logout' %}">Log out</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a#}
+{#              id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>#}
+{#      {% else %}#}
+{#        <a id="signup" href="{% url 'account:user_login' %}">Log in</a>&nbsp;&nbsp;|&nbsp;&nbsp;#}
+{#        <a id="register" href="{% url 'account:user_register' %}">Register</a>#}
+{#      {% endif %}#}
+{#    </div>#}
+    </div><!-- /.navbar-collapse -->
+
+
+
+
+
+{#    <form>#}
+{#      <input type="text" value="黄山" id="ser">#}
+{#    </form>#}
+
+  </div><!-- /.container-fluid -->
+</nav>
 
 <div id="light" class="white_content">
   <a href="#" class="btn btnfff" role="button" onClick="closeWindow()"><strong>close</strong></a>
   <img src="{% static 'img/webwxgetmsgimg.jpg' %}">
 </div>
 <div id="fade" class="black_overlay"></div>
+
+
+
+{#<nav class="navbar navbar-expand-lg navbar-light bg-light">#}
+{#  <a class="navbar-brand" href="\"><img src='{% static "img/logo2.png" %}'></a>#}
+{#  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+{#    <span class="navbar-toggler-icon"></span>#}
+{#  </button>#}
+{##}
+{#  <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#    <ul class="navbar-nav mr-auto">#}
+{#      <li class="nav-item active">#}
+{#        <a class="nav-link" href="\">INDEX <span class="sr-only">(current)</span></a>#}
+{#      </li>#}
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="{% url "activity:activity_list" %}">DESTINATION</a>#}
+{#      </li>#}
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="{% url "activity:retrospection_list" %}">REVIEW</a>#}
+{#      </li>#}
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="{% url "forum:post_list" %}">FORUM</a>#}
+{#      </li>#}
+{#      <li class="nav-item">#}
+{#        <a class="nav-link" href="#" onclick="openWindow()">JOIN US</a>#}
+{#      </li>#}
+{#    </ul>#}
+{##}
+{#    <div class="signre">#}
+{#      {% if user.is_authenticated %}#}
+{#        <button class="btn btn-default dropdown-toggle" type="button"#}
+{#                id="dropdownMenu" data-toggle="dropdown">#}
+{#          {{ user.username }}<span class="caret"></span></button>#}
+{#        <ul class="dropdown-menu">#}
+{#          <li><a href="{% url "account:password_change" %}">更改密码</a></li>#}
+{#          <li><a href="{% url "account:my_information" %}">个人信息</a></li>#}
+{#        </ul>#}
+{#        &nbsp;&nbsp;|&nbsp;&nbsp;#}
+{#        <a id="register" href="{% url 'account:user_logout' %}">Log out</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a#}
+{#              id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>#}
+{#      {% else %}#}
+{#        <a id="signup" href="{% url 'account:user_login' %}">Log in</a>&nbsp;&nbsp;|&nbsp;&nbsp;#}
+{#        <a id="register" href="{% url 'account:user_register' %}">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a#}
+{#              id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>#}
+{#      {% endif %}#}
+{#    </div>#}
+{#    <form>#}
+{#      <input type="text" value="黄山" id="ser">#}
+{#    </form>#}
+{#  </div>#}
+{#</nav>#}
+{##}
+{#<div id="light" class="white_content">#}
+{#  <a href="#" class="btn btnfff" role="button" onClick="closeWindow()"><strong>close</strong></a>#}
+{#  <img src="{% static 'img/webwxgetmsgimg.jpg' %}">#}
+{#</div>#}
+{#<div id="fade" class="black_overlay"></div>#}
+
+{# <li class="nav-item dropdown">#}
+{#        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#          Dropdown#}
+{#        </a>#}
+{#        <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#          <a class="dropdown-item" href="#">Action</a>#}
+{#          <a class="dropdown-item" href="#">Another action</a>#}
+{#          <div class="dropdown-divider"></div>#}
+{#          <a class="dropdown-item" href="#">Something else here</a>#}
+{#        </div>#}
+{#      </li>#}
+{#      <li class="nav-item">#}
+{#        <a class="nav-link disabled" href="#">Disabled</a>#}
+{#      </li>#}
+{##}
+{#    <form class="form-inline my-2 my-lg-0">#}
+{#      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">#}
+{#      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>#}
+{#    </form>#}
+
+
+{#{% load staticfiles %}#}
+{#<div id="page-head" class="clearfix">#}
+{#  <div class="pull-left" id="flaat">#}
+{#    <strong>#}
+{#      <a href="\"><img src='{% static "img/logo2.png" %}'></a>#}
+{#      <ul class="navg">#}
+{#        <li><a href="\">INDEX</a></li>#}
+{#        <li><a href="{% url "activity:activity_list" %}">DESTINATION</a></li>#}
+{#        <li><a href="{% url "activity:retrospection_list" %}">REVIEW</a></li>#}
+{#        <li><a href="{% url "forum:post_list" %}">FORUM</a></li>#}
+{#        <li><a href="#" onclick="openWindow()">JOIN US</a></li>#}
+{#      </ul>#}
+{#    </strong>#}
+{#    <div class="signre">#}
+{#      {% if user.is_authenticated %}#}
+{#        <button class="btn btn-default dropdown-toggle" type="button"#}
+{#                id="dropdownMenu" data-toggle="dropdown">#}
+{#          {{ user.username }}<span class="caret"></span></button>#}
+{#        <ul class="dropdown-menu">#}
+{#          <li><a href="{% url "account:password_change" %}">更改密码</a></li>#}
+{#          <li><a href="{% url "account:my_information" %}">个人信息</a></li>#}
+{#        </ul>#}
+{#        &nbsp;&nbsp;|&nbsp;&nbsp;#}
+{#        <a id="register" href="{% url 'account:user_logout' %}">Log out</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a#}
+{#              id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>#}
+{#      {% else %}#}
+{#        <a id="signup" href="{% url 'account:user_login' %}">Log in</a>&nbsp;&nbsp;|&nbsp;&nbsp;#}
+{#        <a id="register" href="{% url 'account:user_register' %}">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a#}
+{#              id="search" href="#"><span class="glyphicon glyphicon-search"></span></a>#}
+{#      {% endif %}#}
+{#    </div>#}
+{#    <form>#}
+{#      <input type="text" value="黄山" id="ser">#}
+{#    </form>#}
+{#  </div>#}
+{#</div>#}
+{##}
+{#<div id="light" class="white_content">#}
+{#  <a href="#" class="btn btnfff" role="button" onClick="closeWindow()"><strong>close</strong></a>#}
+{#  <img src="{% static 'img/webwxgetmsgimg.jpg' %}">#}
+{#</div>#}
+{#<div id="fade" class="black_overlay"></div>#}

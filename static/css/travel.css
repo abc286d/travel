@@ -1,5 +1,5 @@
 body {
-    padding-top: 1px;
+    /*padding-top: 1px;*/
     padding-left: 0px;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,15 +21,15 @@ a:hover, a:focus { color: #3c443e; }
 .btn-success { background-color: #609f80; }
 
 h1 {
-    font-size: 55px;
+    font-size: 50px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 25px;
     padding-left:30px;
     color:#eba94c;
-    line-height: 13px;
+    line-height: 25px;
     text-align: left;
 }
 h5 {
@@ -40,7 +40,71 @@ h5 {
 }
 
 /* 正文 */
+/*新加的导航栏*/
 
+/* Mobile Styles */
+
+.navbar.navbar-default{
+    /*border-top: 4px solid #ec901b;*/
+    min-height: 100px;
+    background-color:rgba(255,255,255,0.7);
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9000;
+    top: 0;
+
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar.navbar-default{
+    min-height: 100px;
+    background-color:rgba(255,255,255,0.7);
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 9000;
+}
+}
+
+
+
+
+.navbar-brand{
+    padding: 0;
+    margin: 0;
+    height: 100px;
+}
+
+.navbar-collapse.collapse[aria-expanded="false"] .nav.navbar-nav .nav-item{
+    height: 100px;
+    margin-left: 35px;
+}
+
+.navbar-collapse.collapse[aria-expanded="false"] .nav.navbar-nav .nav-item a.nav-link{
+    line-height: 70px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+
+button.navbar-toggle{
+    position: absolute;
+    right: 0;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+.nav.navbar-nav li.nav-item:hover{
+    background-color:rgba(255,255,255,0.8);
+    /*z-index:10000;*/
+    /*transition-delay: 1s;*/
+}
+
+
+/*之前写的*/
 #page-head {
     background-color:rgba(255,255,255,0.7);
     width: 100%;
@@ -70,7 +134,7 @@ h5 {
 }
 
 .signre {
-    display: inline;
+    display: inline-block;
     padding-left: 60px;
     padding-top: 90px;
 }
@@ -94,6 +158,77 @@ form {
 
 
 
+/*最上面滚动的几张图片*/
+
+#gundong {
+    /* background: url('../img/vietnam.jpg'); */
+    width:100%;
+    z-index: 8000;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    /*overflow: hidden;*/
+}
+
+#carousel_box>.carousel-inner{
+    height: 42vw;
+}
+
+.carousel-inner>div>a>img{
+    width: 100%;
+    height: 42vw !important;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 5%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-indicators li {
+    background-color: #D4D5D6;
+    width:30px;
+    height:10px;
+    border: 0;
+}
+.carousel-indicators .active {
+    background-color: #609f80;
+    width: 35px;
+    height: 13px;
+
+}
+
+@media only screen and (max-width: 500px) {
+    #carousel_box>.carousel-inner{
+    height: 66vw;
+    }
+    .carousel-inner>div>a>img{
+    width: 100%;
+    height: 66vw !important;
+}
+}
+
+
+
+
+/*之前写的css*/
+/*
+#gundong {
+     background: url('../img/vietnam.jpg');
+    height:700px;
+    width:100%;
+    z-index: 8000;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
 
 
 #carousel_box {
@@ -134,31 +269,20 @@ form {
 }
 
 
+*/
 
 
 
 
 
-
-
-
-.container-fluid {
-    /* background: url('../img/vietnam.jpg'); */
-    height:700px;
-    width:100%;
-    z-index: 8000;
-    padding-left: 0px;
-    padding-right: 0px;
-    overflow: hidden;
-}
 .container h1 {
     color:#ffffff;
 }
 .s4 {
     margin:0px;
-    padding:35px;
+    padding:25px;
     text-align: center;
-    height:430px;
+    /*height:430px;*/
 }
 .s6 {
     margin:0px;
@@ -167,13 +291,69 @@ form {
     text-align: center;
 }
 
+
+.hot-new{
+    border-top: 4px solid #ec901b;
+}
+
+
+.my-row {
+    max-width: 24.16667em;
+    _width: 24.16667em;
+    /*padding-left: 1em;*/
+    /*padding-right: 1em;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (min-width: 742px){
+    .my-row {
+    width: 742px;
+    max-width: 742px;
+    }
+}
+
+@media (min-width: 1124px){
+    .my-row {
+        width: 1124px;
+        max-width: 1124px;
+    }
+}
+
+.bx-wrapper{
+    max-width: 100% !important;
+    background: transparent;
+    border: 0 !important;
+    -webkit-box-shadow: none;
+
+}
+
+.bxslider li{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 450px ;
+
+}
+
+/*调节 that's for me 按钮*/
+.bxslider li .btnc{
+    position: absolute;
+    margin-left: 90px;
+    bottom: 8px;
+}
+
 .whiteboard {
     background-color: #ffffff;
-    height:450px;
+    /*height:450px;*/
     border-radius: 10px;
+    height: 450px;
+    width: 340px;
 }
+
 .hot {
     position: relative;
+
 }
 .whiteboard img {
     border-top-left-radius: 10px;
@@ -196,47 +376,51 @@ form {
     padding-top:8px;
 }
 .btnh {
+    display: block;
     color:#ffffff;
     background-color:#ec901b;
     width: 25%;
-    margin-left:38%;
+    margin: auto;
     font-size:20px;
-    margin-top:150px;
+    margin-top:50px;
     padding-top:15px;
     padding-bottom:15px;
-    border-top:5px;
-    border-top-color: #ffffff;
     border-top: 1px solid #f3d0a5;
     border-bottom: 1px solid #9e7c51;
 }
 
+
+
 .btnl {
     color:#ffffff;
     background-color:#f29b32;
-    width: 25%;
-    margin-left:38%;
+     width: 25%;
+    margin: auto;
     font-size:20px;
-    margin-top:150px;
+    margin-top:50px;
     padding-top:15px;
     padding-bottom:15px;
-    border-top:5px;
-    border-top-color: #f3d0a5;
     border-top: 1px solid #f3d0a5;
     border-bottom: 1px solid #9e7c51;
 }
 .btnl2 {
+    display:block;
     color:#ffffff;
     background-color:#0678a8;
-    width: 25%;
-    margin-left:38%;
+     width: 25%;
+    margin: auto;
     font-size:20px;
-    margin-top:150px;
+    margin-top:50px;
     padding-top:15px;
     padding-bottom:15px;
-    border-top:5px;
-    border-top-color: #0a85cb;
     border-top: 1px solid #b3e2f3;
     border-bottom: 1px solid #4d6c9e;
+}
+
+@media only screen and (max-width: 500px) {
+    .btnh, .btnl2{
+        width: 50%;
+    }
 }
 .btnf {
     color:#ffffff;
@@ -258,7 +442,7 @@ form {
     width: 25%;
     margin-left:38%;
     font-size:20px;
-    top:75%;
+    top:85%;
     left:3%;
     border-top:5px;
     border-top-color: #ffffff;
@@ -266,7 +450,7 @@ form {
 }
 
 .footinfo {
-    margin-top:35px;
+    margin-top:15px;
 }
 .footinfo h4{
     text-align:center;
@@ -279,7 +463,8 @@ form {
     text-align:center;
     color:#3c443e;
     font-size:15px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+    margin-top: 0;
 } 
 
 
@@ -292,7 +477,9 @@ form {
 
 .bluebg {
     background: url(../img/blue2.jpg);
-    height:900px;
+    width: 100%
+    /*border-top: 4px solid #ec901b;*/
+    /*height:900px;*/
 }
 
 
@@ -441,6 +628,7 @@ form {
     margin-bottom: 15px;
     position:fixed;
     margin-top:100px;
+
 }
 .s888 {
     margin-top:150px;
@@ -502,17 +690,6 @@ form {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .black_overlay{
     display: none; 
     position: absolute;  
@@ -528,11 +705,13 @@ form {
 } 
 .white_content {
    display: none;  
-   position: absolute; 
-   top: 25%; 
-   left: 35%; 
-   width: 32%; 
-   height: 65%; 
+   position: absolute;
+    left: 0;
+
+   /*top: 50%;*/
+   /*left: 35%;*/
+   /*width: 32%; */
+   /*height: 65%; */
    padding: 0px;
    border: 2px solid orange; 
    background-color: white; 
@@ -541,10 +720,18 @@ form {
    overflow:hidden;
 }  
 
+.white_content img{
+    height: 450px;
+    width: 450px;
+}
+
+
+
+
 
 /*--------forum-------*/
 .jourhead {
-    margin-top: 6%;
+    /*margin-top: 6%;*/
 }
 
 .midd h2 {
@@ -737,13 +924,33 @@ form {
     height:30px;
 }
 
+
 .slimmer {
     margin-top:100px;
     padding-top:25px;
-    margin-left:25%;
+    margin-left : 25%;
     width:50%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0);
 }
+
+/* make sure @media rule lies below the original rule*/
+@media screen and (max-width: 500px) {
+    .slimmer{
+        margin-top:30px;
+        padding-top:25px;
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+        background-color: rgba(0,0,0,0);
+  }
+    .slimmer p>img{
+        width:100% !important;
+    }
+}
+
+
+
+
 .dropdown-toggle {
     background: transparent;
 }
@@ -807,8 +1014,8 @@ form {
 
 .greenbg {
     background-color: #98cc31;
-    height:1650px;
-    margin-top:-110px;
+    /*height:1650px;*/
+    /*margin-top:-110px;*/
 }
 
 .greenbg {

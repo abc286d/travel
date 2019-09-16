@@ -4,9 +4,9 @@
 {% block title %}{{ activity.title }}！{% endblock %}
 
 {% block content %}
-    <div class="slimmer">
-        {% autoescape off %}
-          {{ activity.body }}
-        {% endautoescape %}
-    </div>
+  <div class="slimmer">
+    {% autoescape off %}
+      {{ activity.body }}
+    {% endautoescape %}
+  </div>
 {% endblock %}

@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'index',
     'account',
-    'ckeditor',
-    'ckeditor_uploader',
     'forum',
+    'image',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -116,15 +116,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+LOGIN_REDIRECT_URL = '/'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
+STATIC_ROOT = os.path.join(BASE_DIR, "static_root/")
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
-CKEDITOR_UPLOAD_PATH = "uploads/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-LOGIN_REDIRECT_URL = '/'
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'width': '1000px',
+        'height': '600px'
+    }
+}
