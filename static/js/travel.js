@@ -12,7 +12,10 @@ $(document).ready(function () {
     var joinbtn = document.getElementById("joinButton");
     joinbtn.addEventListener("click", openWindow);
 
-//这些图片的地址都可能有问题
+    var closebtn = document.getElementById("closeButton");
+    closebtn.addEventListener("click", closeWindow);
+
+    //这些图片的地址都可能有问题
     function changelike() {
         document.getElementById("liking").src = "img/likered.png";
     }
