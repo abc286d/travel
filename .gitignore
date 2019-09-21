@@ -17,3 +17,6 @@ db\.sqlite3
 !**/migrations/__init__.py
 
 *.py[cod]
+
+\.DS_Store
+/static/\.DS_Store

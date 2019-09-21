@@ -1,6 +1,10 @@
 ## Travel
 **A travelling forum based on python 3.6 and django 2.0.**
 
+Site url: http://45.79.52.88
+
+![alt text](static/img/homepage.png "homepage")
+
  1. Clone or download this repo
  2. Run `python -m venv venv` in the working directory to create virtual environments
  3. Run `pip install -r requirements.txt` in the Terminal (use `pip freeze > requirements.txt` to update this file)
